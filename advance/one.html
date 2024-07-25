@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scripting</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">day 1</div>
+        <div class="day">day 2</div>
+        <div class="day">day 3</div>
+        <div class="day">day 4</div>
+        <div class="day">day 5</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1]);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    // const style1 = parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    // const day1 = document.querySelector(".day")
+    // console.log(day1);
+    // console.log(day1.parentElement);
+    // console.log(day1.nextElementSibling);
+
+    // console.log("NODES: ",parent.childNodes);
+
+    const div = document.createElement(("div"))
+    div.className = "newDiv"
+    div.id = Math.round(Math.random()) * 10 + 1
+    console.log(div);
+
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerHTML = "chai or code"
+    const addText = document.createTextNode("chai or code")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+</script>
+
+</html>
